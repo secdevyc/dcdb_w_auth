@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body id="newbody">
+    <div class="container" id="newContainer">
+      <div class="newsidebar"></div>
+      <div id="new">
+        <a href="/dcdb/loggedin">back</a>
+        <h1 class="showh1">NEW COUPON</h1>
+        <form action="/dcdb/newcoupon" method="POST">
+          <fieldset>
+            <label>
+              <input type="checkbox" name="storeCoupon"/>
+              <span>Is it a store coupon?</span>
+            </label><br />
+            <legend>Coupon Info</legend>
+            Provider: <input type="text" name="makerName" value=""/>
+            Item <input type="text" name="itemName" value=""/>
+          </fieldset>
+          <fieldset>
+            <legend>Coupon Link</legend>
+            <input type="text" name="link" value=""/>
+          </fieldset>
+          <fieldset class="" id="Discount Info">
+            <legend>Discount Info</legend>
+            <input type="text" name="discountAmount" value="amount" id="price"/>
+            <!-- <input type="text" name="expirationDate" value="expires" id="qty"/> -->
+            <!-- <label>Expiration Date:</label> -->
+              <label for="">Expiration Date:</label>
+              <div class="select">
+              <select class="browser-default" name="month">
+                  <option value="" disabled selected>Month</option>
+                <% for (let i = 1; i <= 12; i++) { %>
+                  <option value="<%=i%>"><%=i%></option>
+                <% } %>
+              </select>
+              <select class="browser-default" name="day" value="day">
+                <option value="" disabled selected>Day</option>
+                <% for (let i = 1; i <= 31; i++) { %>
+                  <option value="<%=i%>"><%=i%></option>
+                <% } %>
+              </select>
+              <select class="browser-default" name="year">
+                <option value="" disabled selected>Year</option>
+                <% for (let i = 2019; i <= 2022; i++) { %>
+                  <option value="<%=i%>"><%=i%></option>
+                <% } %>
+              </select>
+              </div>
+          </fieldset>
+          <fieldset>
+            <legend>Tags</legend>
+            <input type="text" name="tags" value=""/>
+          </fieldset>
+
+          <input type="submit" name="" value="add new coupon" class="btn btn-danger" id="newsubmit"/>
+        </form>
+      </div>
+      </div>
+      <div class="col s10 m10 l10" id="footer">
+        <img src="./images/Facebook.png" alt="" style="width:30px; height:30px">
+        <img src="./images/Pinterest.png" alt="" style="width:30px; height:30px">
+        <img src="./images/Twitter.png" alt="" style="width:30px; height:30px">
+      </div>
+  </body>
+</html>

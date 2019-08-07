@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body id="editbody">
+    <div class="container" id="editcontainer">
+      <div class="editsidebar"></div>
+      <div id="edit">
+        <a href="/dcdb/loggedin/<%=coupon.id%>">back</a>
+        <h2 class="showh2">EDIT COUPON</h2>
+        <form action="/dcdb/<%=coupon.id%>?_method=PUT" method="POST">
+          <fieldset>
+            <label class="black-text" id="storecoupon">
+              <input type="checkbox"
+                      name="storeCoupon"
+                      <%if(coupon.storeCoupon === true) { %>
+                          checked
+                      <% } %>
+                      />
+              <span>Is it a store coupon?</span>
+            </label><br />
+            <legend>Coupon Info</legend>
+            Provider: <input type="text" name="makerName" value="<%=coupon.makerName%>"/>
+            Item <input type="text" name="itemName" value="<%=coupon.itemName%>"/>
+          </fieldset>
+          <fieldset>
+            <legend>Coupon Link</legend>
+            <input type="text" name="link" value="<%=coupon.link%>"/>
+          </fieldset>
+          <fieldset class="" id="Discount Info">
+            <legend>Discount Info</legend>
+            <input type="text" name="discountAmount" value="<%=coupon.discountAmount%>" id="price"/>
+            Expires on: <input type="text" name="expirationDate" value="<%=coupon.expirationDate%>"/>
+          </fieldset>
+          <fieldset>
+            <legend>Tags</legend>
+            <input type="text" name="tags" value="<%=coupon.tags%>"/>
+          </fieldset>
+          <input type="submit" name="" value="update coupon" class="btn btn-danger" id="editsubmit"/>
+        </form>
+        </div>
+      </div>
+      <% include ./partials/footer.ejs %>
+  </body>
+</html>

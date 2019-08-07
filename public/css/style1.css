@@ -1,0 +1,65 @@
+/* ====== INDEX PAGE ======== */
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25vw;
+  background: url('./imgs/indexHeader.jpg');
+  background-size: cover;
+  background-position: center;
+}
+#indexHeader {
+  font-size: 60px;
+  background-color: rgba(255, 255, 255, 0.3)
+}
+.btn-small {
+  font-size: 8px;
+  padding: 1px 5px 5px 5px;
+}
+
+/* ========= NEW PAGE ========= */
+.newHeader {
+  /* background: url('./imgs/newHeader.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 30vw;
+  margin: 1em auto;
+  overflow-y: hidden ! important;
+  overflow-x: hidden ! important; */
+}
+/* ============= DETAILS PAGE ============= */
+#showContainer {
+  padding: 3em;
+  height: 50vw;
+  background: url('./imgs/showBackground.jpg');
+  background-size: cover;
+}
+.showHeader, .showBody, .showButtons {
+  width: 70%;
+  margin: 3em auto;
+}
+.showHeader {
+  margin-top: 5em;
+  margin-left: 1em;
+}
+.showBody {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+.showButtons {
+  display: flex;
+  width: 50%;
+  margin: 3em auto 0 1em;
+}
+.showButtons a {
+  margin: 0 2px;
+  padding: 1px 7px;
+  width: 42px;
+  height: 22px;
+  margin: 0;
+  font-size: 8px;
+}
+.showButtons input {
+  margin-left: 10px;
+}

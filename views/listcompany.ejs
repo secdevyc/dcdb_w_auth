@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body>
+    <div class="col s10 m10 l10" id="header">
+      <div id='indexHeader'>Personal Discount Database</div>
+      <form action="/dcdb?_method=DELETE" method="POST">
+        <input class="waves-effect btn-small black-text pink lighten-5 newlink" type="submit" value="Logout" class="waves-effect waves-light btn"/>
+      </form>
+      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/dcdb/loggedin/newcoupon">enter new d/c</a>
+      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/dcdb/loggedin">coupon view</a>
+    </div>
+    <div class="container" id="indexContainer">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Company</th>
+            <th><a href="/dcdb/loggedin/list">Item</a></th>
+            <th><a href="/dcdb/loggedin/list/date">exp date</a></th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% for(let i = 0; i < coupons.length; i++) { %>
+          <tr>
+            <th>
+              <form class="waves-effect waves-light btn-small white-text pink darken-1 deletebutton" action="/dcdb/<%=coupons[i].id%>?_method=DELETE" method="POST">
+                <input  type="submit" name="" value="delete"/>
+              </form>
+            </th>
+            <th>by <%= coupons[i].makerName %></th>
+            <th><%= coupons[i].itemName %></th>
+            <th><%= coupons[i].expirationDate %></th>
+            <th><a href="/dcdb/loggedin/<%= coupons[i].id %>" class="waves-effect waves-light btn-small white-text light-blue darken-2">details</a></th>
+          </tr>
+        <% } %>
+        </tbody>
+      </table>
+    </div>
+      <% include ./partials/footer.ejs %>
+  </body>
+</html>

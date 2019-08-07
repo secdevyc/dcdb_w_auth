@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body>
+    <div class="container" id="showContainer">
+      <div class="sidebar" id="<%=coupon.tags%>"></div>
+      <div class="details">
+        <div class="showHeader">
+          <a href="/dcdb/loggedin">back</a>
+          <h3><%=coupon.makerName%></h3>
+        </div>
+        <div class="showBody">
+          <p>item: <%=coupon.itemName%></p>
+          <p>link for coupon:</p>
+            <% if (coupon.link == 'NO LINK') { %>
+              <p>'NO LINK'</p>
+            <% } else { %>
+              <a href="<%=coupon.link%>">Go to coupon website</a>
+            <% } %>
+          <p class="amount">discount amount: <%=coupon.discountAmount%></p>
+          <p>expires on: <%=coupon.expirationDate%></p>
+          <p>
+            <%if(coupon.storeCoupon == true) { %>
+                this is a STORE COUPON.
+            <% } else { %>
+                this is a MANUFACTURERS COUPON, use it anywhere!
+            <% } %>
+          </p>
+          <p>tags: <%=coupon.tags%></p>
+        </div>
+        <div class="showButtons">
+          <form class="waves-effect waves-light btn-small white-text pink lighten-4 editbutton" action="/dcdb/loggedin/<%=coupon.id%>/edit">
+            <input type="submit" name="edit" value="edit" class="pink lighten-4"/>
+          </form>
+          <!-- <a class="waves-effect waves-light btn-small white-text pink lighten-4" href="/dcdb/<%=coupon.id%>/edit" id="editbutton">edit</a> -->
+          <form class="waves-effect waves-light btn-small white-text pink lighten-4 editbutton" action="/dcdb/<%=coupon.id%>?_method=DELETE" method="POST">
+            <input type="submit" name="edit" value="delete" class="pink lighten-4"/>
+          </form>
+          <form action="/dcdb?_method=DELETE" method="POST">
+            <input type="submit" value="Logout" class="waves-effect waves-light btn-small white-text pink lighten-4 editbutton"/>
+          </form>
+        </div>
+      </div>
+    </div>
+    <% include ./partials/footer.ejs %>
+  </body>
+</html>

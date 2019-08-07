@@ -1,0 +1,301 @@
+body {
+  background-color: rgb(252,228,236, 0.7);
+  font-family: 'Barlow Condensed', sans-serif;
+}
+/* ====== INDEX PAGE ======== */
+#indexContainer {
+  padding: 4em;
+  width: 100%;
+  background: url('imgs/back.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#header {
+  text-align: center;
+}
+#indexHeader {
+  font-size: 60px;
+}
+.newlink {
+  margin-bottom: 2em;
+}
+.card {
+  border: 8px;
+  border-style: dotted;
+  border-color: black;
+  background-color: rgb(252,228,236, 0.8);
+}
+.card a {
+  font-size: 10px;
+  text-align: center;
+}
+.cardcontent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  overflow-y: auto;
+}
+.amount {
+  font-family: 'Lobster', cursive;
+}
+.itemname, .makername, .expdate {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+table {
+  background-color: rgb(252,228,236, 0.8);
+  font-size: 20px
+}
+.deletebutton {
+  font-size: 10px;
+}
+#footer {
+text-align: center;
+padding: 1em;
+}
+#footer img {
+  margin: 1em;
+}
+/* ============ SHOW PAGE ============= */
+#showContainer {
+  width: 60vw;
+  height: 70vw;
+  margin: 25px auto;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #bbb,
+              -1px -1px 10px #bbb,
+              1px -1px 10px #bbb,
+              -1px 1px 10px #bbb;
+}
+.sidebar {
+  width: 50%;
+  background: url('./imgs/sidebar.jpg');
+  background-size: contain;
+  background-repeat: repeat-y;
+  border-radius: 10px 0 0 10px;
+}
+#pizza {
+  width: 50%;
+  background: url('./imgs/pizza.jpg');
+  background-size: cover;
+  background-repeat: repeat-y;
+  border-radius: 10px 0 0 10px;
+}
+#cleaning, #household {
+  width: 50%;
+  background: url('./imgs/cleaning.jpg');
+  background-size: cover;
+  background-repeat: repeat-y;
+  border-radius: 10px 0 0 10px;
+}
+#shampoo, #shower, #bathroom, #bath {
+  width: 50%;
+  background: url('./imgs/showering.jpg');
+  background-size: cover;
+  background-repeat: repeat-y;
+  border-radius: 10px 0 0 10px;
+}
+#fast-food, #burger {
+  width: 50%;
+  background: url('./imgs/fastfood.jpg');
+  background-size: cover;
+  background-repeat: repeat-y;
+  border-radius: 10px 0 0 10px;
+}
+#ice-cream, #sweets, #dessert, #ice {
+  width: 50%;
+  background: url('./imgs/sweets.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+#free {
+  width: 50%;
+  background: url('./imgs/free.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+  background-color: black;
+}
+#breakfast, #coffee {
+  width: 50%;
+  background: url('./imgs/breakfast.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+#lunch, #sandwich {
+  width: 50%;
+  background: url('./imgs/lunch.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+#clothing {
+  width: 50%;
+  background: url('./imgs/clothing.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+#cars {
+  width: 50%;
+  background: url('./imgs/cars.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+#health, #fitness {
+  width: 50%;
+  background: url('./imgs/health.jpg');
+  background-size: 600px 800px;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+#snacks {
+  width: 50%;
+  background: url('./imgs/snacks.jpeg');
+  background-size: 600px 800px;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+#baby {
+  width: 50%;
+  background: url('./imgs/baby.jpg');
+  background-size: 600px 800px;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+#skincare {
+  width: 50%;
+  background: url('./imgs/skincare.jpg');
+  background-size: 600px 800px;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+#pets, #pet, #cat, #dog {
+  width: 50%;
+  background: url('./imgs/pet1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+.details {
+  text-align: center;
+  width: 50%;
+  background: #f9f9f9;
+  border-radius: 0 10px 10px 0;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  margin: 1em;
+  overflow-y: auto;
+}
+.details p {
+  margin: 1em;
+  font-size: 20px;
+  width: 80%;
+}
+.details a {
+  margin: 1em;
+  font-size: 13px;
+}
+.showButtons {
+  margin: 3em auto;
+}
+.editbutton {
+  font-size: 10px;
+  margin: 1em;
+}
+/* ///////// EDIT PAGE /////////// */
+#editbody {
+  background-color: rgb(230,188,152)
+}
+#editcontainer {
+  width: 60vw;
+  height: 70vw;
+  margin: 50px auto;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #bbb,
+              -1px -1px 10px #bbb,
+              1px -1px 10px #bbb,
+              -1px 1px 10px #bbb;
+}
+.editsidebar {
+  width: 50%;
+  background: url('./imgs/editbackground1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: left;
+  background-color: black;
+}
+#edit {
+  width: 50%;
+  background: #f9f9f9;
+  border-radius: 0 10px 10px 0;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  margin: 0;
+  overflow-y: auto;
+}
+#editsubmit {
+  margin: 2em;
+  background-color: rgb(230,188,152)
+}
+#editsubmit:hover {
+  background-color: rgb(207,141,98)
+}
+.select {
+  display: flex;
+}
+/* ////////////// NEW COUPON PAGE //////////// */
+#newbody {
+  background-color: rgb(253,216,53)
+}
+#newContainer {
+  width: 60vw;
+  height: 70vw;
+  margin: 50px auto;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #bbb,
+              -1px -1px 10px #bbb,
+              1px -1px 10px #bbb,
+              -1px 1px 10px #bbb;
+}
+.newsidebar {
+  width: 50%;
+  background: url('./imgs/newsidebar2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: left;
+  background-color: black;
+}
+#new {
+  width: 50%;
+  background: #f9f9f9;
+  border-radius: 0 10px 10px 0;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+#newsubmit {
+  margin: 2em;
+}
+.select {
+  display: flex;
+}

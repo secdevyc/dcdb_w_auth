@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body>
+    <div class="col s10 m10 l10" id="header">
+      <div id='indexHeader'>Welcome <%=currentUser.username%> to your Personal Discount Database</div>
+      <form  action="/dcdb?_method=DELETE" method="POST">
+        <input type="submit" value="Logout" class="waves-effect btn-small black-text pink lighten-5 newlink"/>
+      </form>
+      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/dcdb/loggedin/newcoupon">enter new d/c</a>
+      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/dcdb/loggedin/list">list view</a>
+    </div>
+    <div class="container" id="indexContainer">
+      <div class="row">
+      <% for(let i = 0; i < coupons.length; i++) { %>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="cardcontent">
+              <span class="card-title red-text amount"><%=coupons[i].discountAmount%></span>
+              <!-- <div class="card-action"> -->
+                <a href="/dcdb/loggedin/<%= coupons[i].id %>" class="btn-floating halfway-fab waves-effect waves-light red" id="fab">details</a>
+              <!-- </div> -->
+              <span class="card-title itemname"><%=coupons[i].itemName%></span>
+              <span class="blue-text makername">by <%=coupons[i].makerName%></span>
+              <span class="expdate">use by <%= coupons[i].expirationDate %></span>
+            </div>
+            </div>
+          </div>
+      <% } %>
+        </div>
+      </div>
+        <% include ./partials/footer.ejs %>
+    </div>
+  </body>
+</html>
